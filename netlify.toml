@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm run build -- --configuration=production"
   publish = "dist/parlor/browser"
   environment = { NODE_VERSION = "18" }
 
