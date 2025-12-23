@@ -11,9 +11,9 @@ export const routes: Routes = [
     path: 'home',
     loadComponent: () => import('./landing-page/landing-page').then(m => m.LandingPage)
   },
-     {
+      {
     path: '**',
     redirectTo: 'home'
-  },
+  }
 
 ];
