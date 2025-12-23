@@ -1,19 +1,17 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-   
-    {
+  {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-   {
-    path: 'home',
     loadComponent: () => import('./landing-page/landing-page').then(m => m.LandingPage)
   },
-      {
+  {
+    path: 'home',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
+  {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: ''
   }
-
 ];

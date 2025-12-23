@@ -1,18 +1,26 @@
 [build]
-  command = "npm run build -- --configuration=production"
+  command = "npm run build"
   publish = "dist/parlor/browser"
 
 [build.environment]
-  NODE_VERSION = "20"  # Minimum for Angular 21
-  # OR use 22 for better compatibility:
-  # NODE_VERSION = "22"
-  # OR match your local version:
-  # NODE_VERSION = "24"
+  NODE_VERSION = "20"
 
+# Force all routes to index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Optional: Handle SPA routing better
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    "Cache-Control" = "public, max-age=0, must-revalidate"
 
 [[plugins]]
   package = "@netlify/angular-runtime"
