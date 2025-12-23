@@ -1,7 +1,13 @@
 [build]
   command = "npm run build -- --configuration=production"
   publish = "dist/parlor/browser"
-  environment = { NODE_VERSION = "18" }
+
+[build.environment]
+  NODE_VERSION = "20"  # Minimum for Angular 21
+  # OR use 22 for better compatibility:
+  # NODE_VERSION = "22"
+  # OR match your local version:
+  # NODE_VERSION = "24"
 
 [[redirects]]
   from = "/*"
