@@ -1,0 +1,95 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Parlor</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html> -->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Salozone - Beauty Salon</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="Professional beauty salon services including facials, makeup, hair care, and nail care. Experienced stylists using natural products.">
+  <meta name="keywords" content="beauty salon, facial, makeup, hair care, nail care, spa, beauty services">
+  
+  <!-- CSS Files -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+  <link href="css/flexslider.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Khula:300,400,600,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+</head>
+<body>
+  <app-root></app-root>
+
+  <!-- JS Files -->
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jarallax.js"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/move-top.js"></script>
+  <script src="js/easing.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.countup.js"></script>
+  
+  <!-- Initialization Scripts -->
+  <script>
+    // Initialize components when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // FlexSlider initialization
+      if (typeof jQuery !== 'undefined' && jQuery.fn.flexslider) {
+        jQuery('.flexslider').flexslider({
+          animation: "slide",
+          start: function(slider) {
+            document.body.classList.remove('loading');
+          }
+        });
+      }
+
+      // Owl Carousel initialization
+      if (typeof jQuery !== 'undefined' && jQuery.fn.owlCarousel) {
+        jQuery("#owl-demo").owlCarousel({
+          items: 2,
+          lazyLoad: true,
+          autoPlay: false,
+          pagination: true,
+        });
+      }
+
+      // Jarallax initialization
+      if (typeof jarallax !== 'undefined') {
+        jarallax(document.querySelectorAll('.jarallax'), {
+          speed: 0.5,
+          imgWidth: 1366,
+          imgHeight: 768
+        });
+      }
+
+      // Counter initialization
+      if (typeof jQuery !== 'undefined' && jQuery.fn.countup) {
+        jQuery('.counter').countUp();
+      }
+    });
+  </script>
+</body>
+</html>
